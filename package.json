@@ -1,0 +1,19 @@
+{
+  "name": "monitoring-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "config": "^3.3.6",
+    "ethers": "^5.4.6",
+    "graphql": "^15.5.1",
+    "graphql-request": "^3.5.0",
+    "mongoose": "^6.0.2"
+  }
+}

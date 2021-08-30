@@ -1,0 +1,4 @@
+{
+  "notificationUrl": "FUSE_MONITOR_NOTIFICATION_URL",
+  "pollInterval": "FUSE_MONITOR_POLL_INTERVAL"
+}
