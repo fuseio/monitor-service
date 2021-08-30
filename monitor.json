@@ -1,5 +1,15 @@
 [{
+    "accountDescription": "ramp",
     "accountAddress": "0x98DB3a41bF8bF4DeD2C92A84ec0705689DdEEF8B",
     "tokenAddress": "0x249be57637d8b013ad64785404b24aebae9b098b",
-    "balanceUSD": 5000
+    "balanceLimit": "",
+    "balanceUsdLimit": 5000,
+    "balanceType": "balanceUSD"
+}, {
+    "accountDescription": "fuse.cash join bonus",
+    "accountAddress": "0xa02BCcB3f9cB33f66402c014B21c87F6E27e3bD5",
+    "tokenAddress": "0x0be9e53fd7edac9f859882afdda116645287c629",
+    "balanceLimit": "",
+    "balanceUsdLimit": 5000,
+    "balanceType": "balanceUSD"
 }]
