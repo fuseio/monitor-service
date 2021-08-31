@@ -1,6 +1,6 @@
 exports.tokenPriceQuery = function tokenPriceQuery (address) {
-    const normalizedAddress = address.toLowerCase()
-    return `
+  const normalizedAddress = address.toLowerCase()
+  return `
           {
               bundle(id: "1") {
                   ethPrice

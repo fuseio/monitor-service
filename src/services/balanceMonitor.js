@@ -1,44 +1,66 @@
 const config = require('config')
+const { BALANCE_TYPE } = require('../constants')
 const tokenService = require('./token')
+const notificationService = require('./notification')
 
 let monitorConfigJson
 try {
-    monitorConfigJson = require('../../monitor.json')
+  monitorConfigJson = require('../../monitor.json')
 } catch (e) {
-    throw new Error('Please config file in server root')
+  throw new Error('Please config file in server root')
 }
 
 class BalanceMonitorService {
-    monitorConfigs
+  init () {
+    monitorConfigJson.forEach((monitorConfig) => {
+      this.addMonitor(monitorConfig)
+    })
+  }
 
-    constructor() {
-        this.monitorConfigs = monitorConfigJson
-    }
+  addMonitor ({
+    accountDescription,
+    tokenAddress,
+    accountAddress,
+    balanceType,
+    balanceUsdLimit,
+    balanceLimit
+  }) {
+    const monitor = async () => {
+      try {
+        if (balanceType === BALANCE_TYPE.BALANCE_USD) {
+          const balanceUsd = await tokenService.getBalanceUsd(
+            tokenAddress,
+            accountAddress
+          )
 
-    init () {
-        this.monitorConfigs.forEach((monitorConfig) => {
-            this.addMonitor(monitorConfig)
-        })
-    }
+          if (balanceUsd < balanceUsdLimit) {
+            await notificationService.sendNotifcation(
+              accountAddress,
+              balanceUsd,
+              accountDescription
+            )
+          }
+        } else if (balanceType === BALANCE_TYPE.BALANCE) {
+          const balance = await tokenService.getBalance(
+            tokenAddress,
+            accountAddress
+          )
 
-    addMonitor(monitorConfig) {
-        const monitor = async () => {
-            try {
-                const balanceUSD = await tokenService.getBalanceUSD(
-                    monitorConfig.tokenAddress, 
-                    monitorConfig.accountAddress
-                )
-    
-                if (balanceUSD < monitorConfig.balanceUSD) {
-                    await notificationService.sendNotifcation(monitorConfig.accountAddress)
-                }
-            } catch (e) {
-                console.error('Failed to poll', e)
-            }
+          if (balance < balanceLimit) {
+            await notificationService.sendNotification(
+              accountAddress,
+              balance,
+              accountDescription
+            )
+          }
         }
-
-        setInterval(monitor, config.get('pollInterval'))
+      } catch (e) {
+        console.error('Failed to poll', e)
+      }
     }
+
+    setInterval(monitor, config.get('pollInterval'))
+  }
 }
 
 module.exports = new BalanceMonitorService()
