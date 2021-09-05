@@ -14,11 +14,10 @@
     "axios": "^0.21.1",
     "config": "^3.3.6",
     "ethers": "^5.4.6",
+    "express": "^4.17.1",
     "graphql": "^15.5.1",
     "graphql-request": "^3.5.0",
-    "mongoose": "^6.0.2"
-  },
-  "devDependencies": {
-    "standard": "^16.0.3"
+    "mongoose": "^6.0.2",
+    "morgan": "^1.10.0"
   }
 }

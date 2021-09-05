@@ -1,17 +1,30 @@
-const mongoose = require('mongoose')
 const config = require('config')
+const express = require('express')
+const morgan = require('morgan')
 const balanceMonitorService = require('./services/balanceMonitor')
+const routes = require('./routes')
 
-async function main () {
-  mongoose.set('debug', config.get('mongo.debug'))
-  mongoose.connect(config.get('mongo.uri')).catch((error) => {
-    console.error(error)
-    process.exit(1)
-  })
+const app = express()
 
-  balanceMonitorService.init()
+app.use(morgan('combined'))
 
-  console.log('Fuse Monitering Service...')
-}
+app.set('port', config.get('api.port'))
 
-main()
+app.use(routes)
+
+app.use(function (err, req, res, next) {
+    res.status(err.status || 5000)
+
+    res.json({
+        error: {
+            code: err?.code,
+            message: error?.message
+        }
+    })
+})
+
+app.listen(app.get('port'), function () {    
+    balanceMonitorService.init()
+
+    console.log('Listening on port ' + app.get('port'))
+})

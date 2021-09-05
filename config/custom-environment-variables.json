@@ -1,4 +1,5 @@
 {
   "notificationUrl": "FUSE_MONITOR_NOTIFICATION_URL",
-  "pollInterval": "FUSE_MONITOR_POLL_INTERVAL"
+  "pollInterval": "FUSE_MONITOR_POLL_INTERVAL",
+  "rpcUrl": "FUSE_MONITOR_RPC_URL"
 }
