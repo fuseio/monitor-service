@@ -8,7 +8,7 @@ const app = express()
 
 app.use(morgan('combined'))
 
-app.set('port', config.get('api.port') || 8080)
+app.set('port', config.get('api.port'))
 
 app.use(routes)
 
