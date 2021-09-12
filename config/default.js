@@ -9,5 +9,6 @@ module.exports = {
     graph: {
         fuseswapUrl: 'https://graph.fuse.io/subgraphs/name/fuseio/fuseswap'
     },
-    pollInterval: 3600000 // default 1 hour
+    pollInterval: 3600000,
+    rpcUrl: 'https://rpc.fuse.io'
 }
