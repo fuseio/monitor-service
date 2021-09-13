@@ -36,7 +36,7 @@ class BalanceMonitorService {
           if (balanceUsd < balanceUsdLimit) {
             await notificationService.sendNotifcation(
               accountAddress,
-              balanceUsd,
+              balanceUsdLimit,
               accountDescription
             )
           }
@@ -49,7 +49,7 @@ class BalanceMonitorService {
           if (balance < balanceLimit) {
             await notificationService.sendNotification(
               accountAddress,
-              balance,
+              balanceLimit,
               accountDescription
             )
           }
