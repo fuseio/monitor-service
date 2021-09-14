@@ -23,7 +23,8 @@ class BalanceMonitorService {
     accountAddress,
     balanceType,
     balanceUsdLimit,
-    balanceLimit
+    balanceLimit,
+    tokenSymbol
   }) {
     const monitor = async () => {
       try {
@@ -36,8 +37,11 @@ class BalanceMonitorService {
           if (balanceUsd < balanceUsdLimit) {
             await notificationService.sendNotifcation(
               accountAddress,
+              accountDescription,
+              balanceType,
               balanceUsd,
-              accountDescription
+              balanceUsdLimit,
+              tokenSymbol
             )
           }
         } else if (balanceType === BALANCE_TYPE.BALANCE) {
@@ -49,8 +53,11 @@ class BalanceMonitorService {
           if (balance < balanceLimit) {
             await notificationService.sendNotification(
               accountAddress,
+              accountDescription,
+              balanceType,
               balance,
-              accountDescription
+              balanceLimit,
+              tokenSymbol
             )
           }
         }
