@@ -17,7 +17,7 @@
         "accountDescription": "fuse.cash apy funder",
         "accountAddress": "0x8fC6e52f774e6154adf44E6d6dAa4C35a12A4D4A",
         "tokenAddress": "0x249be57637d8b013ad64785404b24aebae9b098b",
-        "balanceLimit": 3000,
+        "balanceLimit": 500,
         "balanceType": "tokenBalance"
     }
 ]
