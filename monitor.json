@@ -19,5 +19,19 @@
         "tokenAddress": "0x249be57637d8b013ad64785404b24aebae9b098b",
         "balanceLimit": 3000,
         "balanceType": "tokenBalance"
+    },
+    {
+        "accountDescription": "PegSwap USDC balance",
+        "accountAddress": "0xdfE016328E7BcD6FA06614fE3AF3877E931F7e0a",
+        "tokenAddress": "0x620fd5fa44BE6af63715Ef4E65DDFA0387aD13F5",
+        "balanceLimit": 5000,
+        "balanceType": "tokenBalance"
+    },
+    {
+        "accountDescription": "PegSwap fUSD balance",
+        "accountAddress": "0xdfE016328E7BcD6FA06614fE3AF3877E931F7e0a",
+        "tokenAddress": "0x249be57637d8b013ad64785404b24aebae9b098b",
+        "balanceLimit": 5000,
+        "balanceType": "tokenBalance"
     }
 ]
