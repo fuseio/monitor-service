@@ -1,6 +1,9 @@
 const config = require('config')
 const ethers = require('ethers')
 
-const provider = new ethers.providers.JsonRpcProvider(config.get('rpcUrl'))
-
-module.exports = provider
+const getProvider = (provider) => {
+  return new ethers.providers.JsonRpcProvider(
+    config.get(`networks.${provider}`)
+  )
+}
+module.exports = getProvider

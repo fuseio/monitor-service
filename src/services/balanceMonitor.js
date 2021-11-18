@@ -17,55 +17,31 @@ class BalanceMonitorService {
     })
   }
 
-  addMonitor ({
-    accountDescription,
-    tokenAddress,
-    accountAddress,
-    balanceType,
-    balanceUsdLimit,
-    balanceLimit,
-    tokenSymbol
-  }) {
+  addMonitor (monitorConfig) {
+    const { accountAddress, tokenAddress, balanceLimit, balanceType, network } =
+      monitorConfig
     const monitor = async () => {
       try {
+        let balance = await tokenService.getBalance(
+          tokenAddress,
+          accountAddress,
+          network
+        )
+
         if (balanceType === BALANCE_TYPE.BALANCE_USD) {
-          const balanceUsd = await tokenService.getBalanceUsd(
-            tokenAddress,
-            accountAddress
-          )
+          balance = await tokenService.balanceToUsd(balance, tokenAddress)
+        }
 
-          if (balanceUsd < balanceUsdLimit) {
-            await notificationService.sendNotification(
-              accountAddress,
-              accountDescription,
-              balanceType,
-              balanceUsd,
-              balanceUsdLimit,
-              tokenSymbol
-            )
-          }
-        } else if (balanceType === BALANCE_TYPE.BALANCE) {
-          const balance = await tokenService.getBalance(
-            tokenAddress,
-            accountAddress
-          )
-
-          if (balance < balanceLimit) {
-            await notificationService.sendNotification(
-              accountAddress,
-              accountDescription,
-              balanceType,
-              balance,
-              balanceLimit,
-              tokenSymbol
-            )
-          }
+        if (balance < balanceLimit) {
+          await notificationService.sendNotification({
+            balance,
+            ...monitorConfig
+          })
         }
       } catch (e) {
         console.error('Failed to poll', e)
       }
     }
-
     setInterval(monitor, config.get('pollInterval'))
   }
 }

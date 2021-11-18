@@ -5,7 +5,8 @@
         "tokenAddress": "0x249be57637d8b013ad64785404b24aebae9b098b",
         "balanceLimit": 3000,
         "balanceType": "tokenBalance",
-        "tokenSymbol": "fUSD"
+        "tokenSymbol": "fUSD",
+        "network": "fuse"
     },
     {
         "accountDescription": "fuse.cash join bonus",
@@ -13,7 +14,8 @@
         "tokenAddress": "0x0000000000000000000000000000000000000000",
         "balanceUsdLimit": 1000,
         "balanceType": "usdBalance",
-        "tokenSymbol": "WFUSE"
+        "tokenSymbol": "WFUSE",
+        "network": "fuse"
     },
     {
         "accountDescription": "fuse.cash apy funder",
@@ -21,7 +23,8 @@
         "tokenAddress": "0x249be57637d8b013ad64785404b24aebae9b098b",
         "balanceLimit": 500,
         "balanceType": "tokenBalance",
-        "tokenSymbol": "fUSD"
+        "tokenSymbol": "fUSD",
+        "network": "fuse"
     },
     {
         "accountDescription": "PegSwap USDC balance",
@@ -29,7 +32,8 @@
         "tokenAddress": "0x620fd5fa44BE6af63715Ef4E65DDFA0387aD13F5",
         "balanceLimit": 5000,
         "balanceType": "tokenBalance",
-        "tokenSymbol": "USDC"
+        "tokenSymbol": "USDC",
+        "network": "fuse"
     },
     {
         "accountDescription": "PegSwap fUSD balance",
@@ -37,6 +41,16 @@
         "tokenAddress": "0x249be57637d8b013ad64785404b24aebae9b098b",
         "balanceLimit": 5000,
         "balanceType": "tokenBalance",
-        "tokenSymbol": "fUSD"
+        "tokenSymbol": "fUSD",
+        "network": "fuse"
+    },
+    {
+        "accountDescription": "BSC bridge validator",
+        "accountAddress": "0x6F7648D9B6203fF9e6289BBAae3B5738Ad27a0b4",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "balanceLimit": 0.3,
+        "balanceType": "tokenBalance",
+        "tokenSymbol": "BNB",
+        "network": "bsc"
     }
 ]
