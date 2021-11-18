@@ -6,7 +6,7 @@ const fuseswapGraph = require('./fuseswapGraph')
 const getProvider = require('./provider')
 
 class TokenService {
-  async getBalance(tokenAddress, accountAddress, network) {
+  async getBalance (tokenAddress, accountAddress, network) {
     try {
       const provider = getProvider(network)
       if (ethers.constants.AddressZero === tokenAddress) {
@@ -23,12 +23,12 @@ class TokenService {
     }
   }
 
-  async balanceToUsd(balance, tokenAddress) {
+  async balanceToUsd (balance, tokenAddress) {
     const price = await fuseswapGraph.getTokenPrice(this.getToken(tokenAddress))
     return balance * price
   }
 
-  getToken(tokenAddress) {
+  getToken (tokenAddress) {
     return ethers.constants.AddressZero === tokenAddress ? WFUSE : tokenAddress
   }
 }

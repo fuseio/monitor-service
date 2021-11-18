@@ -15,7 +15,7 @@
         "balanceUsdLimit": 1000,
         "balanceType": "usdBalance",
         "tokenSymbol": "WFUSE",
-        "network": "ethereum"
+        "network": "fuse"
     },
     {
         "accountDescription": "fuse.cash apy funder",
@@ -24,7 +24,7 @@
         "balanceLimit": 500,
         "balanceType": "tokenBalance",
         "tokenSymbol": "fUSD",
-        "network": "bsc"
+        "network": "fuse"
     },
     {
         "accountDescription": "PegSwap USDC balance",
@@ -33,7 +33,7 @@
         "balanceLimit": 5000,
         "balanceType": "tokenBalance",
         "tokenSymbol": "USDC",
-        "network": "bsc"
+        "network": "fuse"
     },
     {
         "accountDescription": "PegSwap fUSD balance",
@@ -42,7 +42,7 @@
         "balanceLimit": 5000,
         "balanceType": "tokenBalance",
         "tokenSymbol": "fUSD",
-        "network": "bsc"
+        "network": "fuse"
     },
     {
         "accountDescription": "BSC bridge validator",

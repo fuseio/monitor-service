@@ -11,13 +11,13 @@ try {
 }
 
 class BalanceMonitorService {
-  init() {
+  init () {
     monitorConfigJson.forEach((monitorConfig) => {
       this.addMonitor(monitorConfig)
     })
   }
 
-  addMonitor(monitorConfig) {
+  addMonitor (monitorConfig) {
     const { accountAddress, tokenAddress, balanceLimit, balanceType, network } =
       monitorConfig
     const monitor = async () => {

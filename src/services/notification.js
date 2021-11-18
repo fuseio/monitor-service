@@ -3,7 +3,7 @@ const config = require('config')
 const { BALANCE_TYPE } = require('../constants')
 
 class NotifcationService {
-  async sendNotification({
+  async sendNotification ({
     accountDescription,
     accountAddress,
     balanceType,
