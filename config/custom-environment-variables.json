@@ -1,5 +1,10 @@
 {
   "notificationUrl": "FUSE_MONITOR_NOTIFICATION_URL",
   "pollInterval": "FUSE_MONITOR_POLL_INTERVAL",
-  "rpcUrl": "FUSE_MONITOR_RPC_URL"
+  "rpcUrl": "FUSE_MONITOR_RPC_URL",
+  "networks": {
+    "ethereum": "ETHEREUM_URL_PROVIDER",
+    "fuse": "FUSE_URL_PROVIDER",
+    "bsc": "BSC_URL_PROVIDER"
+  }
 }
