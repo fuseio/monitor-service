@@ -6,5 +6,6 @@
     "ethereum": "ETHEREUM_URL_PROVIDER",
     "fuse": "FUSE_URL_PROVIDER",
     "bsc": "BSC_URL_PROVIDER"
-  }
+  },
+  "token": "FUSE_WALLET_BACKEND_TOKEN"
 }

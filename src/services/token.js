@@ -6,10 +6,10 @@ const fuseswapGraph = require('./fuseswapGraph')
 const getProvider = require('./provider')
 
 class TokenService {
-  async getBalance (tokenAddress, accountAddress, network) {
+  async getBalance ({ tokenAddress, accountAddress, network }) {
     try {
       const provider = getProvider(network)
-      if (ethers.constants.AddressZero === tokenAddress) {
+      if (tokenAddress === ethers.constants.AddressZero) {
         const balance = await provider.getBalance(accountAddress)
         return Number(formatEther(balance))
       } else {

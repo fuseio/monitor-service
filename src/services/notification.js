@@ -15,6 +15,7 @@ class NotifcationService {
     const balanceSuffix = tokenSymbol || ''
     const text = `${accountDescription} - ${accountAddress} the balance is ${balancePrefix}${balance} ${balanceSuffix}, less than the limit of ${balancePrefix}${balanceLimit} ${balanceSuffix}.`
 
+    // console.log(text)
     await axios.post(config.get('notificationUrl'), {
       text
     })

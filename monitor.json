@@ -52,5 +52,14 @@
         "balanceType": "tokenBalance",
         "tokenSymbol": "BNB",
         "network": "bsc"
+    },
+    {
+        "accountDescription": "Fuse funder",
+        "endpoint": "https://wallet.fuse.io/api/v1/accounts/api/v1/accounts/fuse-funder",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "balanceLimit": 0.3,
+        "balanceType": "tokenBalance",
+        "tokenSymbol": "FUSE",
+        "network": "fuse"
     }
 ]
