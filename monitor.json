@@ -54,6 +54,15 @@
         "network": "bsc"
     },
     {
+        "accountDescription": "Fuse faucet",
+        "accountAddress": "0xeA2a2436b52BBBf6AAC962A2ecB2aF8f37147a2b",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "balanceLimit": 10,
+        "balanceType": "tokenBalance",
+        "tokenSymbol": "FUSE",
+        "network": "fuse"
+    },
+    {
         "accountDescription": "Studio funder account",
         "accountAddress": "0x373C383b05C121E541f239aFE5fd73C013FeD20f",
         "tokenAddress": "0x0000000000000000000000000000000000000000",
