@@ -12,9 +12,9 @@
         "accountDescription": "fuse.cash join bonus",
         "accountAddress": "0xa02BCcB3f9cB33f66402c014B21c87F6E27e3bD5",
         "tokenAddress": "0x0000000000000000000000000000000000000000",
-        "balanceUsdLimit": 1000,
+        "balanceLimit": 1000,
         "balanceType": "usdBalance",
-        "tokenSymbol": "WFUSE",
+        "tokenSymbol": "Fuse",
         "network": "fuse"
     },
     {
@@ -60,6 +60,15 @@
         "balanceLimit": 10,
         "balanceType": "tokenBalance",
         "tokenSymbol": "FUSE",
+        "network": "fuse"
+    },
+    {
+        "accountDescription": "Studio funder account",
+        "accountAddress": "0x373C383b05C121E541f239aFE5fd73C013FeD20f",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "balanceLimit": 3000,
+        "balanceType": "tokenBalance",
+        "tokenSymbol": "Fuse",
         "network": "fuse"
     }
 ]
