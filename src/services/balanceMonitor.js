@@ -38,8 +38,8 @@ class BalanceMonitorService {
             ...monitorConfig
           })
         }
-      } catch (e) {
-        console.error('Failed to poll', e)
+      } catch ({ message }) {
+        console.error('Failed to poll', message)
       }
     }
     setInterval(monitor, config.get('pollInterval'))

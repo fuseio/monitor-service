@@ -52,5 +52,14 @@
         "balanceType": "tokenBalance",
         "tokenSymbol": "BNB",
         "network": "bsc"
+    },
+    {
+        "accountDescription": "Fuse faucet",
+        "accountAddress": "0xeA2a2436b52BBBf6AAC962A2ecB2aF8f37147a2b",
+        "tokenAddress": "0x0000000000000000000000000000000000000000",
+        "balanceLimit": 5,
+        "balanceType": "tokenBalance",
+        "tokenSymbol": "FUSE",
+        "network": "fuse"
     }
 ]
