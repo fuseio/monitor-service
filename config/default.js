@@ -7,7 +7,7 @@ module.exports = {
     uri: 'mongodb://localhost/test'
   },
   graph: {
-    fuseswapUrl: 'https://graph.fuse.io/subgraphs/name/fuseio/fuseswap'
+    fuseswapUrl: 'https://api.thegraph.com/subgraphs/name/fuseio/fuseswap'
   },
   pollInterval: 3600000,
   networks: {
